@@ -1,0 +1,14 @@
+Contact: security@kaicoin.africa
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://kai-coin-frontend.vercel.app/.well-known/security.txt
+
+# KAI Coin Security Policy
+# We take security seriously. Please report vulnerabilities responsibly.
+
+Policy: https://github.com/Kaijage7/kai-coin-frontend/security/policy
+Acknowledgments: https://github.com/Kaijage7/kai-coin-frontend/security/advisories
+
+# About KAI Coin
+KAI is Africa's resilience infrastructure token, securing climate, agriculture,
+health, law, governance, disaster response, and AI systems across the continent.

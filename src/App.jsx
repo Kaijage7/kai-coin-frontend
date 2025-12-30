@@ -1497,30 +1497,63 @@ function NetworkMonitor() {
 }
 
 // Ankh Logo Component - Symbol of Eternal Life
-function AnkhLogo({ size = 50 }) {
+// KAI Chicken Head Logo - Symbol of African agricultural resilience
+// Represents the poultry pillar and food security across the continent
+function ChickenLogo({ size = 50 }) {
   return (
-    <svg viewBox="0 0 100 120" width={size} height={size * 1.2} className="ankh-logo">
+    <svg viewBox="0 0 100 100" width={size} height={size} className="chicken-logo">
       <defs>
-        <linearGradient id="ankhGold" x1="0%" y1="0%" x2="100%" y2="100%">
+        <linearGradient id="chickenGold" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#ffd700" />
           <stop offset="50%" stopColor="#daa520" />
           <stop offset="100%" stopColor="#b8860b" />
         </linearGradient>
-        <filter id="ankhGlow">
-          <feGaussianBlur stdDeviation="3" result="blur" />
+        <radialGradient id="chickenGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#ffd700" stopOpacity="0.8" />
+          <stop offset="100%" stopColor="#ffd700" stopOpacity="0" />
+        </radialGradient>
+        <filter id="logoGlow">
+          <feGaussianBlur stdDeviation="2.5" result="blur" />
           <feMerge>
             <feMergeNode in="blur" />
             <feMergeNode in="SourceGraphic" />
           </feMerge>
         </filter>
       </defs>
-      <ellipse cx="50" cy="25" rx="20" ry="22" fill="none" stroke="url(#ankhGold)" strokeWidth="6" filter="url(#ankhGlow)" />
-      <rect x="44" y="45" width="12" height="65" fill="url(#ankhGold)" rx="2" filter="url(#ankhGlow)" />
-      <rect x="20" y="45" width="60" height="10" fill="url(#ankhGold)" rx="2" filter="url(#ankhGlow)" />
-      <ellipse cx="50" cy="25" rx="10" ry="12" fill="#ffd700" opacity="0.3" />
+
+      {/* Glow background */}
+      <circle cx="50" cy="50" r="45" fill="url(#chickenGlow)" opacity="0.6" />
+
+      {/* Head/Body */}
+      <ellipse cx="50" cy="55" rx="28" ry="32" fill="url(#chickenGold)" filter="url(#logoGlow)" />
+
+      {/* Comb (crown) - 3 peaks */}
+      <path d="M 35 35 Q 35 25 40 25 Q 40 30 45 30 Q 45 22 50 22 Q 50 30 55 30 Q 55 25 60 25 Q 60 35 65 35 L 50 45 Z"
+            fill="#ef4444" filter="url(#logoGlow)" />
+
+      {/* Beak */}
+      <path d="M 75 50 L 85 55 L 75 60 Z" fill="#f59e0b" filter="url(#logoGlow)" />
+
+      {/* Eye */}
+      <circle cx="60" cy="48" r="5" fill="#1a1a1a" />
+      <circle cx="62" cy="46" r="2" fill="#ffffff" opacity="0.8" />
+
+      {/* Wattle (neck flap) */}
+      <ellipse cx="70" cy="65" rx="8" ry="12" fill="#ef4444" opacity="0.9" filter="url(#logoGlow)" />
+
+      {/* Feather detail lines */}
+      <path d="M 30 60 Q 35 65 40 70" stroke="#b8860b" strokeWidth="1.5" fill="none" opacity="0.6" />
+      <path d="M 32 70 Q 37 75 42 80" stroke="#b8860b" strokeWidth="1.5" fill="none" opacity="0.6" />
+      <path d="M 60 70 Q 55 75 50 80" stroke="#b8860b" strokeWidth="1.5" fill="none" opacity="0.6" />
+
+      {/* Inner glow highlight */}
+      <ellipse cx="45" cy="50" rx="12" ry="15" fill="#ffd700" opacity="0.2" />
     </svg>
   )
 }
+
+// Alias for backward compatibility
+const AnkhLogo = ChickenLogo
 
 // ============================================
 // PILLAR SIGNAL GRAPHS - Advanced Real-time Analytics

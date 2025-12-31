@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "kai-coin",
+  "name": "kai-intelligence-africa",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",

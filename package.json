@@ -15,9 +15,11 @@
     "@tanstack/react-query": "^5.90.14",
     "axios": "^1.13.2",
     "ethers": "^6.16.0",
+    "leaflet": "^1.9.4",
     "lucide-react": "^0.562.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-leaflet": "^5.0.0",
     "react-router-dom": "^7.11.0",
     "socket.io-client": "^4.8.3"
   },
